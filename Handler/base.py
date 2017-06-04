@@ -30,16 +30,6 @@ class BaseHandler(tw.RequestHandler):
         self.cache_manager = self.application.cache_manager
         self.async_do = self.thread_executor.submit
 
-    @gen.coroutine
-    def init_session(self):
-        if not self.session:
-            self.session = Session(self)
-            yield self.session.init_fetch()
-
-    @gen.coroutine
-    def prepare(self):
-        yield self.init_session
-        if 
 
     @gen.coroutine
     def on_finish(self):

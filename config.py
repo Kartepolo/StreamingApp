@@ -63,21 +63,11 @@ session_keys = dict(
 # site configs
 config = dict(
     debug=True,
-    log_level="WARNING",
-    log_console=False,
-    log_file=True,
-    log_file_path="logs/log",  # 末尾自动添加 @端口号.txt_日期
-    compress_response=True,
-    xsrf_cookies=True,
-    cookie_secret="kjsdhfweiofjhewnfiwehfneiwuhniu",
-    login_url="/auth/login",
     port=8888,
     max_threads_num=500,
     database=database_config,
     redis_session=redis_session_config,
     session_keys=session_keys,
     master=True,
-    navbar_styles={"inverse": "魅力黑", "default": "优雅白"},
-    default_avatar_url="identicon",
     application=None,
 )
